@@ -41,6 +41,14 @@ class JobApplicationTest {
 		job = null;
 	}
 
+	/*
+	 * SELECT * FROM job_application WHERE id = 1;
++----+----------------------+------+-------+---------+--------------+--------------+-------+------+------------+
+| id | title                | city | state | company | posting_date | date_applied | offer | url  | job_number |
++----+----------------------+------+-------+---------+--------------+--------------+-------+------+------------+
+|  1 | software developer 1 | NULL | NULL  | NULL    | NULL         | NULL         |  NULL | NULL | NULL       |
++----+----------------------+------+-------+---------+--------------+--------------+-------+------+------------+
+	 */
 	@Test
 	@DisplayName("Testing basic JobApplication mapping")
 	void test_basic_jobApplication_mapping() {
