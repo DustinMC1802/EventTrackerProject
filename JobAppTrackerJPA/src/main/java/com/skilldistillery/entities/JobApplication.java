@@ -33,7 +33,7 @@ public class JobApplication {
 	@Column(name = "date_applied")
 	private LocalDate dateApplied;
 	
-	private boolean offer;
+	private Boolean offer = false;
 	
 	private String url;
 	

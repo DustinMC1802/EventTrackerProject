@@ -29,7 +29,7 @@ public class JobApplicationController {
 		return serv.index();	
 		}
 	
-	@PostMapping("films")
+	@PostMapping("apps")
 	public JobApplication create(
 			@RequestBody JobApplication app,
 			HttpServletResponse res
@@ -73,7 +73,7 @@ public class JobApplicationController {
 		return app;
 	}
 	
-	@DeleteMapping("apps/{appId")
+	@DeleteMapping("apps/{appId}")
 	public void delete(@PathVariable Integer appId) {
 		serv.delete(appId);
 	}

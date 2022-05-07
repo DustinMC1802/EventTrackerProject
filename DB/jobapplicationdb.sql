@@ -50,11 +50,11 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `jobapplicationsdb`;
-INSERT INTO `job_application` (`id`, `title`, `city`, `state`, `company`, `posting_date`, `date_applied`, `offer`, `url`, `job_number`) VALUES (1, 'software developer 1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `job_application` (`id`, `title`, `city`, `state`, `company`, `posting_date`, `date_applied`, `offer`, `url`, `job_number`) VALUES (2, 'Software Engineer I (NST)', 'Redmond', 'WA', 'Ninentdo of America', NULL, NULL, NULL, 'https://careers.nintendo.com/job-openings/listing/210000005E.html?src=CWS-10000', '210000005E');
-INSERT INTO `job_application` (`id`, `title`, `city`, `state`, `company`, `posting_date`, `date_applied`, `offer`, `url`, `job_number`) VALUES (3, 'Full Stack Java Developer', 'Fort Knox', 'KY', 'SAIC', '2022-03-16', NULL, NULL, 'https://jobs.saic.com/jobs/9051640-full-stack-java-developer', '2204326');
-INSERT INTO `job_application` (`id`, `title`, `city`, `state`, `company`, `posting_date`, `date_applied`, `offer`, `url`, `job_number`) VALUES (4, 'Full Stack Java Developer (REMOTE)\n', 'Fort Knox', 'KY', 'AGIL3TECH (AGIL3 TECHNOLOGY SOLUTIONS)', NULL, NULL, NULL, 'https://www.smartrecruiters.com/Agil3TechAgil3TechnologySolution/743999822561758-full-stack-java-developer-remote-', NULL);
-INSERT INTO `job_application` (`id`, `title`, `city`, `state`, `company`, `posting_date`, `date_applied`, `offer`, `url`, `job_number`) VALUES (5, 'Full Stack Developer', 'Boston', 'MA', 'MassMutual', NULL, NULL, NULL, 'https://careers.massmutual.com/job/15072725/full-stack-developer-boston-ma/', 'R11194\n\n\n');
+INSERT INTO `job_application` (`id`, `title`, `city`, `state`, `company`, `posting_date`, `date_applied`, `offer`, `url`, `job_number`) VALUES (1, 'software developer 1', NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL);
+INSERT INTO `job_application` (`id`, `title`, `city`, `state`, `company`, `posting_date`, `date_applied`, `offer`, `url`, `job_number`) VALUES (2, 'Software Engineer I (NST)', 'Redmond', 'WA', 'Ninentdo of America', NULL, NULL, 0, 'https://careers.nintendo.com/job-openings/listing/210000005E.html?src=CWS-10000', '210000005E');
+INSERT INTO `job_application` (`id`, `title`, `city`, `state`, `company`, `posting_date`, `date_applied`, `offer`, `url`, `job_number`) VALUES (3, 'Full Stack Java Developer', 'Fort Knox', 'KY', 'SAIC', '2022-03-16', NULL, 0, 'https://jobs.saic.com/jobs/9051640-full-stack-java-developer', '2204326');
+INSERT INTO `job_application` (`id`, `title`, `city`, `state`, `company`, `posting_date`, `date_applied`, `offer`, `url`, `job_number`) VALUES (4, 'Full Stack Java Developer (REMOTE)\n', 'Fort Knox', 'KY', 'AGIL3TECH (AGIL3 TECHNOLOGY SOLUTIONS)', NULL, NULL, 0, 'https://www.smartrecruiters.com/Agil3TechAgil3TechnologySolution/743999822561758-full-stack-java-developer-remote-', NULL);
+INSERT INTO `job_application` (`id`, `title`, `city`, `state`, `company`, `posting_date`, `date_applied`, `offer`, `url`, `job_number`) VALUES (5, 'Full Stack Developer', 'Boston', 'MA', 'MassMutual', NULL, NULL, 0, 'https://careers.massmutual.com/job/15072725/full-stack-developer-boston-ma/', 'R11194\n\n\n');
 
 COMMIT;
 
