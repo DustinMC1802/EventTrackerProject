@@ -26,10 +26,10 @@
 ####	@DeleteMapping("apps/{appId}")
 ####	public void delete
 
-####| HTTP Verb | URI             | Request Body                                   | Response Body | Purpose |
+`####| HTTP Verb | URI             | Request Body                                   | Response Body | Purpose |
 ####|-----------|-----------------|------------------------------------------------|---------------|---------|
 ####| GET       | `/api/apps`     |                                                | Collection of representations of all _job_application_ resources | **Index** endpoint|
 ####| GET       | `/api/apps/1`   |                                                | Representation of _job_application_ `6` | **Retrieve** endpoint |
 ####| POST      | `/api/apps`     | Representation of a new _job_application_ resource        | Description of the result of the operation | **Create** endpoint |
 ####| PUT       | `/api/apps/6`   | Representation of a new version of _job_application_ `6` | | **Replace** endpoint |
-####| DELETE    | `/api/apps/6`   |                                         | | **Delete** route |
+####| DELETE    | `/api/apps/6`   |                                         | | **Delete** route |`
