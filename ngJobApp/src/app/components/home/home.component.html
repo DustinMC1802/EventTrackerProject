@@ -1,0 +1,71 @@
+<h1>Job Application Tracker</h1>
+<br>
+<form *ngIf="!selected">
+  Title: <input type="text" name="title" [(ngModel)]="newJobApp.title"> <br>
+  City: <input type="text" name="city" [(ngModel)]="newJobApp.city"> <br>
+  State: <input type="text" name="state" [(ngModel)]="newJobApp.state"> <br>
+  Company: <input type="text" name="company" [(ngModel)]="newJobApp.company"> <br>
+  Date the ad was posted: <input type="text" name="postingDate" [(ngModel)]="newJobApp.postingDate"> <br>
+  Date the application was sent: <input type="text" name="dateApplied" [(ngModel)]="newJobApp.dateApplied"> <br>
+  Ad URL: <input type="text" name="url" [(ngModel)]="newJobApp.url"> <br>
+  Job number: <input type="text" name="jobNumber" [(ngModel)]="newJobApp.jobNumber"> <br>
+  <button (click)="createJobApp(newJobApp)">Submit</button>
+</form>
+
+<div>
+  <table *ngIf="!selected" class="table table-striped table-hover">
+    <thead class="table-dark">
+      <tr>
+        <td>ID</td>
+        <td>Title</td>
+        <td>City</td>
+        <td>State</td>
+        <td>Company</td>
+        <td>Applcation Date</td>
+        <td>Delete</td>
+
+      </tr>
+    </thead>
+    <tbody *ngFor="let jobApp of jobApps">
+      <tr>
+        <td (click)="setApp(jobApp)">{{jobApp.id}}</td>
+        <td (click)="setApp(jobApp)">{{jobApp.title}}</td>
+        <td (click)="setApp(jobApp)">{{jobApp.city}}</td>
+        <td (click)="setApp(jobApp)">{{jobApp.state}}</td>
+        <td (click)="setApp(jobApp)">{{jobApp.company}}</td>
+        <td (click)="setApp(jobApp)">{{jobApp.dateApplied}}</td>
+        <td><button (click)="deleteJobApp(jobApp.id)">X</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div *ngIf="selected && !editJobApp">
+  <p>Application ID: {{selected.id}}</p>
+  <p>Job Title: {{selected.title}}</p>
+  <p>City: {{selected.city}}</p>
+  <p>State: {{selected.state}}</p>
+  <p>Company: {{selected.company}}</p>
+  <p>Date ad was posted: {{selected.postingDate}}</p>
+  <p>Application date: {{selected.dateApplied}}</p>
+  <p>Offered a job: {{selected.offer}}</p>
+  <p>Want ad URL: {{selected.url}}</p>
+  <p>Job number: {{selected.jobNumber}}</p>
+  <button (click)="setEditJobApp()">Edit</button>
+  <button (click)="selected = null" >Back</button>
+</div>
+
+<div *ngIf="editJobApp">
+  <form action="">
+    Job title: <input type="text" name="title" [(ngModel)]="editJobApp.title"> <br>
+    City: <input type="text" name="city" [(ngModel)]="editJobApp.city"> <br>
+    State: <input type="text" name="state" [(ngModel)]="editJobApp.state"> <br>
+    Company: <input type="text" name="company" [(ngModel)]="editJobApp.company"> <br>
+    Date the ad was posted: <input type="text" name="postingDate" [(ngModel)]="editJobApp.postingDate"> <br>
+    Date the application was sent: <input type="text" name="dateApplied" [(ngModel)]="editJobApp.dateApplied"> <br>
+    Ad URL: <input type="text" name="url" [(ngModel)]="editJobApp.url"> <br>
+    Job number: <input type="text" name="jobNumber" [(ngModel)]="editJobApp.jobNumber"> <br>
+    <button (click)="updateJobApp(editJobApp)">Save</button>
+    <button (click)="editJobApp=null">Cancel</button>
+  </form>
+</div>
