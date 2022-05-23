@@ -25,3 +25,14 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Overview
+This project was my first exploration for using Angular in order to create a front end for my Job Applcation Tracker. It is a simple web page but includes basic bootstrap and CRUD functionality.
+
+## New Technologies Used
+* TypeScript
+* Visual Studio Code
+* Angular
+
+## Lessons Learned
+Using Angular to create a front end is a very intuitive and efficient system. It still feels pretty new though, and I look forward to getting more practice as I prepare for my self-paced education after I graduate from Skill Distillery.
